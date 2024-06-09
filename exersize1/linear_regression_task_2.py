@@ -12,14 +12,14 @@ noise = np.random.uniform(-1, 1, (100, 1))
 y = x @ a + b + noise
 
 
-# Spliting the Data
+# Splitting the Data
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2 , random_state=37)
 scaler = StandardScaler()
 x_train = scaler.fit_transform(x_train)
 x_test = scaler.fit_transform(x_test)
 
 # Model implementation
-class MultivariableLinearRegrassion:
+class MultivariableLinearRegression:
     def __init__(self):
         self.theta = None
 
@@ -45,7 +45,7 @@ lrs = [0.001, 0.005, 0.01, 0.09]  # learning rates
 plt.figure(figsize=(10, 8))
 
 for i, lr in enumerate(lrs):
-    model = MultivariableLinearRegrassion()
+    model = MultivariableLinearRegression()
     model.fit(x_train, y_train, lr, iterations=500)
     plt.plot(model.cost_history, label=f'LR={lr}')
 

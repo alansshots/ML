@@ -12,8 +12,8 @@ action_space = env.action_space.n  # total number of actions
 qtable = np.zeros((state_space, action_space))  # initialize Q-table with zeros
 
 # Variables for training/testing
-test_episodes = 10000  # number of episodes for testing
-train_episodes = 40000  # number of episodes for training
+test_episodes = 20000  # number of episodes for testing
+train_episodes = 60000  # number of episodes for training
 episodes = train_episodes + test_episodes  # total number of episodes
 max_steps = 100  # maximum number of steps per episode
 
